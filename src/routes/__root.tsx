@@ -13,12 +13,12 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Grain & Glass — Photography & Film Studio',
+        title: 'Classic Photo Studio — Photography & Film Studio',
       },
       {
         name: 'description',
         content:
-          'Grain & Glass is a two-camera photography and film studio shooting weddings, documentary shorts, and brand films that favor real moments over staged ones.',
+          'Classic Photo Studio is a photography and film studio shooting weddings, documentary shorts, and brand films that favor real moments over staged ones.',
       },
     ],
   }),

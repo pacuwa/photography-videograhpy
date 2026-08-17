@@ -1,4 +1,4 @@
-# Grain & Glass
+# Classic Photo Studio
 
 A marketing site for a photography and videography studio: a landing page with hero, services,
 a filterable portfolio grid, studio bio, testimonials, and a contact form, plus a detail page

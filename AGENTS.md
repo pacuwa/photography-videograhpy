@@ -4,7 +4,7 @@ Project overview for developers and AI agents working on this codebase.
 
 ## Project Overview
 
-Grain & Glass is a marketing site for a photography and videography studio: a one-page
+Classic Photo Studio is a marketing site for a photography and videography studio: a one-page
 landing experience (hero, services, filterable portfolio, studio bio, testimonials, contact
 form) plus a detail page per portfolio project. Built with TanStack Start and deployed on
 Netlify.

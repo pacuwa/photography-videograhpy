@@ -4,7 +4,7 @@ import projects from '@/data/portfolio'
 import { Frame } from '@/components/Frame'
 import { ContactForm } from '@/components/ContactForm'
 
-export const Route = createFileRoute('/')({
+export const Route = createFileRoute('/')({ 
   component: Home,
 })
 
@@ -27,7 +27,7 @@ const services = [
   {
     n: '04',
     title: 'Prints & Archival Books',
-    body: 'Hand-bound linen albums and silver-gelatin prints from our darkroom partners in Porto, for clients who want the work to outlast the hard drive.',
+    body: 'Hand-bound linen albums and silver-gelatin prints from our darkroom partners, for clients who want the work to outlast the hard drive.',
   },
 ]
 
@@ -63,7 +63,7 @@ function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 md:px-10 py-6 mix-blend-difference">
       <a href="#top" className="font-display italic text-lg tracking-tight text-[var(--ink)]">
-        Grain &amp; Glass
+        Classic Photo Studio
       </a>
       <nav className="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.16em] text-[var(--ink)]">
         <a href="#services" className="hover:text-[var(--copper-bright)] transition-colors">
@@ -102,7 +102,7 @@ function Hero() {
       <div className="relative z-10 w-full px-6 md:px-10 pb-16 md:pb-24 pt-40">
         <div className="max-w-5xl">
           <p className="animate-rise text-xs uppercase tracking-[0.3em] text-[var(--copper-bright)] mb-6">
-            Photography &amp; film studio — est. 2016
+            Photography & film studio
           </p>
           <h1
             className="animate-rise font-display italic font-light text-[13vw] md:text-[6.4vw] leading-[0.95] text-[var(--ink)]"
@@ -118,11 +118,11 @@ function Hero() {
           >
             <p className="max-w-md text-[var(--ink-dim)] leading-relaxed">
               Two cameras, no direction to "act natural," and a bias toward the moment nobody
-              planned. Weddings, brand films, and portraits shot the same honest way since 2016.
+              planned. Weddings, brand films, and portraits shot the same honest way.
             </p>
             <a
               href="#work"
-              className="shrink-0 inline-flex items-center gap-2 text-sm uppercase tracking-[0.14em] text-[var(--ink)] border-b border-[var(--copper)] pb-1 hover:text-[var(--copper-bright)] transition-colors w-max"
+              className="shrink-0 inline-flex items-center gap-2 text-sm uppercase tracking-[0.14em] text-[var(--ink)] border-b border-[var(--copper)] pb-1 hover:text-[var(--copper-bright)] transition-colors"
             >
               See the work ↓
             </a>
@@ -158,7 +158,7 @@ function Services() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
         <h2 className="font-display italic text-4xl md:text-5xl">What we shoot</h2>
         <p className="max-w-sm text-[var(--ink-dim)] text-sm leading-relaxed">
-          Four kinds of work, all shot by the same two-person crew, all delivered by people who
+          Four kinds of work, all shot by our professional crew, all delivered by people who
           were on set — never outsourced to an editing house.
         </p>
       </div>
@@ -258,10 +258,7 @@ function Studio() {
         <div>
           <h2 className="font-display italic text-4xl md:text-5xl mb-8">The studio</h2>
           <p className="text-[var(--ink-dim)] leading-relaxed mb-5">
-            Grain &amp; Glass started in a one-bedroom apartment in Porto in 2016, when Odalys
-            Ferreira got tired of handing wedding clients a gallery of two hundred nearly-identical
-            posed shots. The studio now runs four full-time shooters and takes on roughly forty
-            projects a year — deliberately capped so every frame still gets a human edit.
+            Classic Photo Studio is dedicated to capturing authentic moments through the lens of professional photographers. We specialize in weddings, brand films, and editorial portraits — all shot with a commitment to honesty and craft.
           </p>
           <p className="text-[var(--ink-dim)] leading-relaxed">
             We shoot on a mix of digital and film, favor available light over strobes, and would
@@ -269,10 +266,10 @@ function Studio() {
           </p>
         </div>
         <div className="grid grid-cols-2 gap-8 md:pt-2">
-          <Stat value="212" label="Weddings shot since 2016" />
+          <Stat value="500+" label="Photos delivered to clients" />
           <Stat value="38" label="Countries we've worked in" />
-          <Stat value="4" label="Full-time shooters on staff" />
-          <Stat value="9yrs" label="Average client retention for return sittings" />
+          <Stat value="Professional" label="Shooters on staff" />
+          <Stat value="9yrs" label="Average client retention" />
         </div>
       </div>
     </section>
@@ -291,21 +288,21 @@ function Stat({ value, label }: { value: string; label: string }) {
 const testimonials = [
   {
     quote:
-      "They talked us out of a shot list on the first call. I fought it for about a week and then let it go — the gallery they delivered was the only wedding album either of us has ever looked at twice.",
-    name: 'Bettina Okonkwo-Reyes',
-    role: 'Client, Low Tide Vows',
+      "They talked us out of a shot list on the first call. I fought it for about a week and then let it go — the gallery they delivered was the only wedding album either of us has ever looked back on.",
+    name: 'Client A',
+    role: 'Satisfied Customer',
   },
   {
     quote:
-      "We've hired production companies that charged three times as much and delivered something that felt like a car commercial. Grain & Glass gave our machinists a film they actually recognized themselves in.",
-    name: 'Warrick Thresher',
-    role: 'Owner, Thresher Supply Co.',
+      "Professional, timely, and the photos capture the essence of our event perfectly. Highly recommended.",
+    name: 'Client B',
+    role: 'Satisfied Customer',
   },
   {
     quote:
-      'Anouk is notoriously difficult to photograph — she told me so herself before the sitting. Thirty-five minutes of light and they still found the frame that ended up on the album sleeve.',
-    name: 'Iben Solberg',
-    role: 'Label manager, Corvid Recordings',
+      'They found the perfect moments without being intrusive. The attention to detail in every shot is remarkable.',
+    name: 'Client C',
+    role: 'Satisfied Customer',
   },
 ]
 
@@ -346,22 +343,20 @@ function Contact() {
             trying to capture.
           </h2>
           <p className="text-[var(--ink-dim)] leading-relaxed mb-10 max-w-sm">
-            We answer inquiries within two business days and take on roughly forty projects a
-            year, so dates book out six to nine months ahead — especially for weddings between
-            May and October.
+            We answer inquiries promptly and are available for bookings throughout the year. Contact us to discuss your project and availability.
           </p>
           <div className="space-y-4 text-sm">
             <div className="flex justify-between border-t border-[var(--line)] py-3">
               <span className="text-[var(--ink-dim)] uppercase tracking-[0.12em]">Studio</span>
-              <span>Rua das Flores 112, Porto, Portugal</span>
+              <span>Lira City Ayago trading center</span>
             </div>
             <div className="flex justify-between border-t border-[var(--line)] py-3">
               <span className="text-[var(--ink-dim)] uppercase tracking-[0.12em]">Email</span>
-              <span>hello@grainandglass.studio</span>
+              <span>info.alrine@gmail.com</span>
             </div>
             <div className="flex justify-between border-t border-b border-[var(--line)] py-3">
-              <span className="text-[var(--ink-dim)] uppercase tracking-[0.12em]">Phone</span>
-              <span>+351 22 019 4477</span>
+              <span className="text-[var(--ink-dim)] uppercase tracking-[0.12em]">Phone / WhatsApp</span>
+              <span>+256785157237</span>
             </div>
           </div>
         </div>
@@ -376,7 +371,7 @@ function Contact() {
 function Footer() {
   return (
     <footer className="px-6 md:px-10 py-10 border-t border-[var(--line)] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[var(--ink-dim)] uppercase tracking-[0.12em]">
-      <span>© {new Date().getFullYear()} Grain &amp; Glass Studio</span>
+      <span>© {new Date().getFullYear()} Classic Photo Studio</span>
       <div className="flex gap-6">
         <a href="#top" className="hover:text-[var(--copper-bright)] transition-colors">
           Back to top
@@ -385,7 +380,7 @@ function Footer() {
           Instagram
         </a>
         <a href="#" className="hover:text-[var(--copper-bright)] transition-colors">
-          Vimeo
+          WhatsApp
         </a>
       </div>
     </footer>

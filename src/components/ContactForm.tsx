@@ -39,8 +39,7 @@ export function ContactForm() {
           Message received.
         </p>
         <p className="text-[var(--ink-dim)] leading-relaxed">
-          We read every inquiry ourselves — expect a reply within two business days, usually
-          from Odalys directly.
+          We read every inquiry ourselves — expect a reply within two business days via email or WhatsApp.
         </p>
       </div>
     )
@@ -66,7 +65,7 @@ export function ContactForm() {
             required
             value={fields.name}
             onChange={handleChange}
-            placeholder="Marisol Reyes"
+            placeholder="Your name"
             className="w-full bg-transparent border-b border-[var(--line)] py-2 focus:outline-none focus:border-[var(--copper)] transition-colors placeholder:text-[var(--ink-dim)]/40"
           />
         </div>
@@ -120,14 +119,14 @@ export function ContactForm() {
 
       {status === 'error' && (
         <p className="text-sm text-[#c9694b]">
-          That didn't send. Try again, or email us directly at hello@grainandglass.studio.
+          That didn't send. Try again, or contact us directly at info.alrine@gmail.com or +256785157237 on WhatsApp.
         </p>
       )}
 
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="group relative mt-2 inline-flex items-center gap-3 border border-[var(--copper)] text-[var(--copper-bright)] px-7 py-3 rounded-sm overflow-hidden transition-colors hover:text-[#14100d] disabled:opacity-60"
+        className="group relative mt-2 inline-flex items-center gap-3 border border-[var(--copper)] text-[var(--copper-bright)] px-7 py-3 rounded-sm overflow-hidden transition-colors hover:text-[var(--ground)] disabled:opacity-50"
       >
         <span className="absolute inset-0 bg-[var(--copper)] translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
         <span className="relative tracking-[0.1em] uppercase text-sm">
