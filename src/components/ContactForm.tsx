@@ -20,14 +20,18 @@ export function ContactForm() {
     e.preventDefault()
     setStatus('sending')
     try {
-      const res = await fetch('/__forms.html', {
+      const res = await fetch('/.netlify/functions/send-email', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'inquiry', ...fields }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(fields),
       })
-      if (!res.ok) throw new Error('bad response')
+      if (!res.ok) {
+        const text = await res.text()
+        throw new Error(text || 'bad response')
+      }
       setStatus('sent')
-    } catch {
+    } catch (err) {
+      console.error(err)
       setStatus('error')
     }
   }
@@ -126,7 +130,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="group relative mt-2 inline-flex items-center gap-3 border border-[var(--copper)] text-[var(--copper-bright)] px-7 py-3 rounded-sm overflow-hidden transition-colors hover:text-[var(--ground)] disabled:opacity-50"
+        className="group relative mt-2 inline-flex items-center gap-3 border border-[var(--copper)] text-[var(--copper-bright)] px-7 py-3 rounded-sm overflow-hidden transition-colors"
       >
         <span className="absolute inset-0 bg-[var(--copper)] translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
         <span className="relative tracking-[0.1em] uppercase text-sm">
